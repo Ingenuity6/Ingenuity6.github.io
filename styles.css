@@ -194,6 +194,49 @@ footer a {
 }
 /* ... (previous CSS code) ... */
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 1.2em; /* Reduced font size */
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.sections-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Added gap between sections */
+}
+
+.section {
+  width: 45%; /* Adjusted width to allow space between sections */
+  padding: 20px;
+  text-align: center;
+}
+
+.section h4 {
+  font-size: 1em; /* Reduced font size */
+}
+
+.action-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em; /* Reduced font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #094352;
+}
+
 .objects {
   position: absolute;
   top: 50%;
