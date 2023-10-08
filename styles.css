@@ -99,7 +99,7 @@ body {
 .content h2 {
     font-size: 3.5em;
     color: var(--primary);
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .content p {
@@ -121,7 +121,7 @@ footer a {
 
 
 .section {
-  width: 48%; /* Adjust the width as needed */
+  width: 40%; /* Adjust the width as needed */
   padding: 20px;
   background-color: #f0f0f0; /* Add a background color to sections */
   border: 1px solid #ccc; /* Add borders for separation */
