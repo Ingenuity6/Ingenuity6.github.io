@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: #094b65;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#header .logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+#header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--primary);
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+.parallax-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.forest,
+.water {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.forest {
+  background-image: url('forest.jpg'); /* Replace with your forest image */
+}
+
+.water {
+  background-image: url('water.png'); /* Replace with your water image */
+}
+
+
+
+
+
+.content {
+  padding: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* Create space between sections */
+}
+
+.content h2 {
+    font-size: 3.5em;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1em;
+    color: var(--primary);
+}
+
+footer {
+    position: relative;
+    padding: 0px 100px;
+    background: var(--primary);
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.section {
+  width: 48%; /* Adjust the width as needed */
+  padding: 20px;
+  background-color: #f0f0f0; /* Add a background color to sections */
+  border: 1px solid #ccc; /* Add borders for separation */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for a card-like effect */
+}
+
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.action-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #094352; /* Change color on hover */
+}
+
+/* ... (rest of the CSS code) ... */
+
+@keyframes forest-animation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes water-animation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+@keyframes bird-fly {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        transform: translateX(50%) translateY(-100px);
+    }
+}
+
+@keyframes explore-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* ... (previous CSS code) ... */
+
+.objects {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.bird, .satellite {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background-size: cover;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* .bird {
+  left: 10%;
+  background-image: url('co2.png'); 
+  animation-name: bird-fly;
+  animation-delay: 1s;
+} 
+*/
+
+.satellite {
+  right: 17%;
+  
+  background-image: url('sat1.png'); /* Replace with your satellite image */
+  animation-name: satellite-fly;
+  animation-delay: 1s;
+}
+
+
+
+/* ... (rest of the CSS code) ... */
+.explore {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: 1; /* Set initial opacity to 1 to display the text */
+  transition: font-size 0.5s; /* Add a transition for smooth font size change */
+}
